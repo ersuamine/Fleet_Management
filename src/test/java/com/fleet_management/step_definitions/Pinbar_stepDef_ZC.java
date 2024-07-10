@@ -27,8 +27,8 @@ public class Pinbar_stepDef_ZC {
 
 
 
-    @Then("{string} see “How To Use Pinbar”")
-    public void seeHowToUsePinbar(String userType) {
+    @Then("users see “How To Use Pinbar”")
+    public void seeHowToUsePinbar() {
 
         String actualPinbarText = pinbarHelpPageZc.howToUsePinbar.getText();
 
@@ -37,8 +37,8 @@ public class Pinbar_stepDef_ZC {
 
 
 
-    @And("{string} see “Use pin icon on the right top corner of page to create fast access link in the pinbar.”")
-    public void seeUseThePinIconOnTheRightTopCornerOfPageToCreateFastAccessLinkInThePinbar(String userType) {
+    @And("users see “Use pin icon on the right top corner of page to create fast access link in the pinbar.”")
+    public void seeUseThePinIconOnTheRightTopCornerOfPageToCreateFastAccessLinkInThePinbar() {
 
         String actualText = pinbarHelpPageZc.usePinIconText.getText();
         String expectedText = "Use pin icon on the right top corner of page to create fast access link in the pinbar.";

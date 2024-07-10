@@ -7,8 +7,8 @@ Feature: Learning how to use the pin bar functionality
   @AC1
   Scenario Outline:
     When "<userType>" click the “Learn how to use this space” link on the homepage
-    Then "<userType>" see “How To Use Pinbar”
-    And "<userType>" see “Use pin icon on the right top corner of page to create fast access link in the pinbar.”
+    Then users see “How To Use Pinbar”
+    And users see “Use pin icon on the right top corner of page to create fast access link in the pinbar.”
 
     Examples:
       | userType      |
