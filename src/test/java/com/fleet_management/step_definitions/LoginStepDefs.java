@@ -27,6 +27,7 @@ public class LoginStepDefs {
             username = ConfigurationReader.getProperty("store_manager_username");
             password = ConfigurationReader.getProperty("store_manager_password");
         }
+
         //send username and password and login
         new LoginPage().login(username,password);
     }
