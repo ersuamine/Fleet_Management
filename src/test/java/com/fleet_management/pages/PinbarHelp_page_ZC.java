@@ -22,4 +22,8 @@ public class PinbarHelp_page_ZC extends BasePage{
 
     @FindBy(xpath = "//div[@class='clearfix']/p[1]")
     public WebElement usePinIconText;
+
+
+    @FindBy(xpath = "//img[@src='/bundles/oronavigation/images/pinbar-location.jpg']")
+    public WebElement image;
 }

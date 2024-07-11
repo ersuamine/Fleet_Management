@@ -17,3 +17,13 @@ Feature: Learning how to use the pin bar functionality
       | driver        |
 
 
+  @AC2
+  Scenario Outline:
+    When "<userType>" click the “Learn how to use this space” link on the homepage
+    Then users see an image on the page.
+
+    Examples:
+      | userType      |
+      | store manager |
+      | sales manager |
+      | driver        |
