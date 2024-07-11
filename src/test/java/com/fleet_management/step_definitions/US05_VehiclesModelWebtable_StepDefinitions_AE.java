@@ -32,7 +32,6 @@ public class US05_VehiclesModelWebtable_StepDefinitions_AE {
     @Then("user should see following columns")
     public void user_should_see_following_columns(List<String> expectedTableHeaders) {
 
-        List<WebElement> tableHeaders = vehicleModelPage.tableHeaders;
         List<String> actualTableHeaders = new ArrayList<>();
 
         for (WebElement header : vehicleModelPage.tableHeaders) {
