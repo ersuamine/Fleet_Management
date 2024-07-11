@@ -45,4 +45,13 @@ public class Pinbar_stepDef_ZC {
 
         Assert.assertTrue(actualText.contains(expectedText));
     }
+
+
+
+    @Then("users see an image on the page.")
+    public void usersSeeAnImageOnThePage() {
+
+        Assert.assertTrue(pinbarHelpPageZc.image.isDisplayed());
+
+    }
 }
