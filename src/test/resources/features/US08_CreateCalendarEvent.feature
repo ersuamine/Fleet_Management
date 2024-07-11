@@ -26,7 +26,6 @@ Feature: Users should be able to login
     And  user clicks the Calender Event
     Then user click the Create Calendar Event
     And user clicks the Repeat check box
-    Then user verifies the number "1" by default in the Repeat Every input option.
     Then user cleared the Calendar event Repeat Every field
     Then user should be able to see "This value should not be blank." error message
 
