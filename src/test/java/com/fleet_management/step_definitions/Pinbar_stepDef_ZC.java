@@ -17,7 +17,7 @@ public class Pinbar_stepDef_ZC {
     PinbarHelp_page_ZC pinbarHelpPageZc = new PinbarHelp_page_ZC();
     LoginStepDefs loginStepDefs = new LoginStepDefs();
 
-    @When("{string} click the “Learn how to use this space” link on the homepage")
+    @When("users click the “Learn how to use this space” link on the homepage")
     public void clickTheLearnHowToUseThisSpaceLinkOnTheHomepage(String userType) {
 
         loginStepDefs.the_user_logged_in_as(userType);
