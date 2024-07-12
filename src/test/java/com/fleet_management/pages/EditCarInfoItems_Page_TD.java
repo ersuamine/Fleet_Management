@@ -17,10 +17,12 @@ public class EditCarInfoItems_Page_TD extends BasePage {
 
     @FindBy(xpath = "//li[@class='dropdown dropdown-level-1'][1]")
     public WebElement FleetModule;
-
-    @FindBy(xpath = "//a[@class='dropdown-toggle']")
-    public WebElement Dots;
+/////tbody/tr[1]/td[21]//a[@class='dropdown-toggle']
+    @FindBy(xpath = "  //table//tbody/tr[1]/td[21]//div[@class='dropdown']")
+    public WebElement salesAndStoreDots;
+    @FindBy(xpath = "  //table//tbody/tr[1]/td[20]//div[@class='dropdown']")
+    public WebElement driverDots;
     //(//a[@title='Delete'])[1]
-    @FindBy(xpath = "(//ul[@class='nav nav-pills icons-holder launchers-list']//a)")
+    @FindBy(xpath = "//tbody/tr[1]/td[20]//div[@class='dropdown']//li[@class='launcher-item']")
     public List<WebElement> dotOptions;
 }
