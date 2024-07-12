@@ -46,6 +46,10 @@ public abstract class BasePage {
     public List<WebElement> allModules;
 
 
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
+    public WebElement fleetModule;
+
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
