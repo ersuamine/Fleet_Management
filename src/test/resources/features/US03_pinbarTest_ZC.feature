@@ -6,7 +6,8 @@ Feature: Learning how to use the pin bar functionality
 
   @AC1
   Scenario Outline:
-    When "<userType>" click the “Learn how to use this space” link on the homepage
+    Given the user logged in as "<userType>"
+    When users click the “Learn how to use this space” link on the homepage
     Then users see “How To Use Pinbar”
     And users see “Use pin icon on the right top corner of page to create fast access link in the pinbar.”
 
@@ -19,7 +20,8 @@ Feature: Learning how to use the pin bar functionality
 
   @AC2
   Scenario Outline:
-    When "<userType>" click the “Learn how to use this space” link on the homepage
+    Given the user logged in as "<userType>"
+    When users click the “Learn how to use this space” link on the homepage
     Then users see an image on the page.
 
     Examples:
@@ -27,3 +29,7 @@ Feature: Learning how to use the pin bar functionality
       | store manager |
       | sales manager |
       | driver        |
+
+
+
+
