@@ -14,11 +14,11 @@ import java.util.List;
 public class US05_VehiclesModelWebtable_StepDefinitions_AE {
 
     US05_VehiclesModelPage_AE vehicleModelPage = new US05_VehiclesModelPage_AE();
+    
+    @Given("user clicks {string} from {string} tab")
+    public void user_clicks_from_tab(String moduleName, String tabName) {
 
-    @Given("user clicks Vehicle Model module from Fleet tab")
-    public void user_clicks_vehicle_model_module_from_fleet_tab() {
-
-        vehicleModelPage.navigateToModule("Fleet","Vehicles Model");
+        vehicleModelPage.navigateToModule(tabName,moduleName);
     }
 
     @Given("user is on the {string} page")
