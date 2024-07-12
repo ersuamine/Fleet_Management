@@ -6,7 +6,7 @@ Feature: Users should be able to login
 
   @Ac1
   Scenario Outline: Menu Options for sales manager
-    When "<userType>" enters the information
+    Given the user logged in as "<userType>"
     Then sales manager should be able to see following modules
       | Dashboards         |
       | Fleet              |
