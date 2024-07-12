@@ -1,22 +1,16 @@
 package com.fleet_management.step_definitions;
 
-import com.fleet_management.pages.EditCarInfoItems_Page_TD;
+import com.fleet_management.pages.US06_EditCarInfoItems_Page_TD;
 import com.fleet_management.utilities.BrowserUtils;
 import com.fleet_management.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class EditCarInfoItems_stepDef_TD {
-    EditCarInfoItems_Page_TD editCarInfoItems_page = new EditCarInfoItems_Page_TD();
+public class US06_EditCarInfoItems_stepDef_TD {
+    US06_EditCarInfoItems_Page_TD editCarInfoItems_page = new US06_EditCarInfoItems_Page_TD();
     Actions actions = new Actions(Driver.getDriver());
 
     @When("user chooses Vehicle from  the Fleet module")

@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class EditCarInfoItems_Page_TD extends BasePage {
-    public EditCarInfoItems_Page_TD() {
+public class US06_EditCarInfoItems_Page_TD extends BasePage {
+    public US06_EditCarInfoItems_Page_TD() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
