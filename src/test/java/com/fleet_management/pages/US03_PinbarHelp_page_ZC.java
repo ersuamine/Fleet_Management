@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PinbarHelp_page_ZC extends BasePage{
+public class US03_PinbarHelp_page_ZC extends BasePage{
 
-    public PinbarHelp_page_ZC(){
+    public US03_PinbarHelp_page_ZC(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
