@@ -1,6 +1,6 @@
 package com.fleet_management.step_definitions;
 
-import com.fleet_management.pages.US01_DashboardPage;
+import com.fleet_management.pages.US01_DashboardPage_MA;
 import com.fleet_management.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class US01_Dashboard_StepDef {
+public class US01_Dashboard_StepDef_MA {
 
-    US01_DashboardPage us01_DashboardPage = new US01_DashboardPage();
+    US01_DashboardPage_MA us01_DashboardPage = new US01_DashboardPage_MA();
     LoginStepDefs loginStepDefs = new LoginStepDefs();
 
 

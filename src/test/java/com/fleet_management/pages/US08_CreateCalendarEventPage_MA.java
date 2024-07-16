@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US08_CreateCalendarEventPage extends BasePage{
+public class US08_CreateCalendarEventPage_MA extends BasePage{
 
-    public US08_CreateCalendarEventPage() {
+    public US08_CreateCalendarEventPage_MA() {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
