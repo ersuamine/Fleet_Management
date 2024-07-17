@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 @Kebi
-=======
-@login
->>>>>>> origin/Kbreab
 Feature:  Vehicle Selection information
   Agile Story: As a user (Sales and Store manager), I should be able to select any vehicle from the
   Vehicles page (web table)

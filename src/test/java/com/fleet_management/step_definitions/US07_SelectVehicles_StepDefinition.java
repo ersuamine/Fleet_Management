@@ -44,7 +44,7 @@ public class US07_SelectVehicles_StepDefinition {
     }
 
     @Then("user should be able to see all the checkboxes as selected")
-    public void userShouldBeAbleToSeeAllTheCheckboxesAsChecked() {
+    public void userShouldBeAbleToSeeAllTheCheckboxesAsSelected() {
 
         List<WebElement> actualBoxes = us07SelectVehiclesPage.checkboxes;
 
