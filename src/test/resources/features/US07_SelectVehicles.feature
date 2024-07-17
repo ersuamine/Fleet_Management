@@ -12,7 +12,7 @@ Feature:  Vehicle Selection information
     Given the user logged in as "<userType>"
     #Given the user logged in with username as "User1" and password as "UserUser123"
     #Given the user logged in as "driver"
-    When user clicks on the vehicles module from fleet tab
+    And user clicks "Vehicles" from "Fleet" tab
     Then user should be able to see all the checkboxes as unchecked
 
 
@@ -25,7 +25,7 @@ Feature:  Vehicle Selection information
 @ACTwo
     Scenario Outline: Verify that users can check the first checkbox to select all the cars
       Given the user logged in as "<userType>"
-      When user clicks on the vehicles module from fleet tab
+      And user clicks "Vehicles" from "Fleet" tab
       And user should be able to see all the checkboxes as unchecked
       And user should be click the first checkbox
       Then user should be able to see all the checkboxes as selected
@@ -39,7 +39,7 @@ Feature:  Vehicle Selection information
 @ACThree
   Scenario Outline: Verify that users can select any car
     Given the user logged in as "<userType>"
-    When user clicks on the vehicles module from fleet tab
+    And user clicks "Vehicles" from "Fleet" tab
     And user should be able to see all the checkboxes as unchecked
     Then user should be able to select a random car
 

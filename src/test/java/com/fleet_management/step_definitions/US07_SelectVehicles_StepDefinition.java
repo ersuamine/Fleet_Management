@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
+import java.util.Random;
 
 public class US07_SelectVehicles_StepDefinition {
 
@@ -19,11 +20,6 @@ public class US07_SelectVehicles_StepDefinition {
     US07_SelectVehiclesPage us07SelectVehiclesPage = new US07_SelectVehiclesPage();
 
 
-    @When("user clicks on the vehicles module from fleet tab")
-    public void userClicksOnTheVehiclesModuleFromFleetTab() {
-
-      us07SelectVehiclesPage.navigateToModule("Fleet","Vehicles");
-    }
 
 
     @Then("user should be able to see all the checkboxes as unchecked")
@@ -54,12 +50,19 @@ public class US07_SelectVehicles_StepDefinition {
 
     }
 
+
     @Then("user should be able to select a random car")
     public void userShouldBeAbleToSelectARandomCar() {
 
+        // create instance of Random class
+        Random rand = new Random();
+
+        // Generate random integers in range 0 to 24
+        int randomIndex = rand.nextInt(25);
+
         List<WebElement> actualBoxes = us07SelectVehiclesPage.checkboxes;
         BrowserUtils.waitFor(2);
-        actualBoxes.get(7).click();
+        actualBoxes.get(randomIndex).click();
 
     }
 }
