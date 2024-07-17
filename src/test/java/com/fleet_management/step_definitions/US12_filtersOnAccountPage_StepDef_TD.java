@@ -4,6 +4,7 @@ import com.fleet_management.pages.US12_filtersOnAccountPagePage_TD;
 import com.fleet_management.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -22,10 +23,12 @@ public class US12_filtersOnAccountPage_StepDef_TD {
         List<String> actualInFilters = new ArrayList<>();
 
         for (WebElement filter : filtersOnAccountPage.allFilters) {
+            String [] filterName =filter.getText().split(":");
 
-            actualInFilters.add(filter.getText());
+            actualInFilters.add(filterName[0]);
         }
-        System.out.println(actualInFilters);
+        Assert.assertEquals(expectedInFilters,actualInFilters);
+
     }
 
     @When("user clicks the filter button")
