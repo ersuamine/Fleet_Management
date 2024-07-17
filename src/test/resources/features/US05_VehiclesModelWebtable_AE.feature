@@ -1,10 +1,12 @@
-@US05 @regression
+@PRG13-306
 Feature: Vehicles Model information webtable
   Agile story: As a user, I want to view columns on the Vehicles Model page.
 
-  Background: User is already in the log in page
+  Background:User is already in the log in page
+		#@PRG13-303
     Given the user is on the login page
-@wip5
+
+  @PRG13-304
   Scenario Outline: Verify user can see columns on Vehicles Model page
     Given the user logged in as "<userType>"
     And user clicks "Vehicles Model" from "Fleet" tab
@@ -25,8 +27,9 @@ Feature: Vehicles Model information webtable
       | userType      |
       | store manager |
       | sales manager |
-@wip5
+
+  @PRG13-305
   Scenario: Verify driver sees error message upon clicking Vehicles Model module
     Given the user logged in as "driver"
     And user clicks "Vehicles Model" from "Fleet" tab
-    Then driver should see "You do not have permission to perform this action." error message
+    Then user should see "You do not have permission to perform this action." error message
