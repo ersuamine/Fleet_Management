@@ -41,8 +41,8 @@ public class US05_VehiclesModelWebtable_StepDefinitions_AE {
         Assert.assertEquals(expectedTableHeaders,actualTableHeaders);
     }
 
-    @Then("driver should see {string} error message")
-    public void driver_should_see_error_message(String expectedErrorMessage) {
+    @Then("user should see {string} error message")
+    public void user_should_see_error_message(String expectedErrorMessage) {
 
         BrowserUtils.waitForVisibility(vehicleModelPage.errorMessageForDriver,2);
         Assert.assertEquals(expectedErrorMessage,vehicleModelPage.errorMessageForDriver.getText());
