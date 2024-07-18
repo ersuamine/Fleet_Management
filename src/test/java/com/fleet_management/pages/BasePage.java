@@ -15,6 +15,9 @@ import java.time.Duration;
 import java.util.List;
 
 public abstract class BasePage {
+    public BasePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
@@ -38,22 +41,11 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[text()=\"Calendar Events\"]")
     public WebElement calendarEvents;
 
-    //TODO delete if not in use
-    @FindBy(xpath = "//li[@class='dropdown dropdown-level-1'][4]")
-    public WebElement activitiesModule;
-
     @FindBy(css="li.dropdown.dropdown-level-1")
     public List<WebElement> allModules;
 
-
     @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
     public WebElement fleetModule;
-
-
-    public BasePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-
 
     /**
      * @return page name, for example: Dashboard
@@ -64,7 +56,6 @@ public abstract class BasePage {
 //        BrowserUtils.waitForStaleElement(pageSubTitle);
         return pageSubTitle.getText();
     }
-
 
     /**
      * Waits until loader screen present. If loader screen will not pop up at all,
@@ -80,8 +71,6 @@ public abstract class BasePage {
         }
 
     }
-
-
 
     /**
      * This method will navigate user to the specific module in vytrack application.
