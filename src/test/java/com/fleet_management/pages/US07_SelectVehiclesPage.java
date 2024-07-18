@@ -9,11 +9,6 @@ import java.util.List;
 
 public class US07_SelectVehiclesPage extends BasePage  {
 
-    public US07_SelectVehiclesPage(){
-
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
-
     @FindBy(xpath = "(//span[@class =\"title title-level-1\"])[2]")
     public List<WebElement> FleetModule;
 
