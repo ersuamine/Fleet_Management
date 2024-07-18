@@ -8,21 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class US06_EditCarInfoItems_Page_TD extends BasePage {
-    public US06_EditCarInfoItems_Page_TD() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
 
-    @FindBy(xpath = "//a[.='Vehicles']")
-    public WebElement Vehicles;
-
-    @FindBy(xpath = "//li[@class='dropdown dropdown-level-1'][1]")
-    public WebElement FleetModule;
-/////tbody/tr[1]/td[21]//a[@class='dropdown-toggle']
-    @FindBy(xpath = "  //table//tbody/tr[1]/td[21]//div[@class='dropdown']")
+    @FindBy(xpath = "  //table//tbody/tr[1]/td[21]//div[@class='more-bar-holder']/div")
     public WebElement salesAndStoreDots;
-    @FindBy(xpath = "  //table//tbody/tr[1]/td[20]//div[@class='dropdown']")
+    @FindBy(xpath = "  //table//tbody/tr[1]/td[20]//div[@class='more-bar-holder']/div")
     public WebElement driverDots;
-    //(//a[@title='Delete'])[1]
-    @FindBy(xpath = "//tbody/tr[1]/td[20]//div[@class='dropdown']//li[@class='launcher-item']")
-    public List<WebElement> dotOptions;
+    @FindBy(xpath = "(//ul[@class='nav nav-pills icons-holder launchers-list'])[1]//a")
+    public List<WebElement> iconList;
+    @FindBy(xpath = "(//ul[@class='nav nav-pills icons-holder launchers-list'])[1]")
+    public WebElement iconBar;
+
 }
