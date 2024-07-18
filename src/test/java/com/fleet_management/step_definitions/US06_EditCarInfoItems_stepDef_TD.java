@@ -23,8 +23,8 @@ public class US06_EditCarInfoItems_stepDef_TD {
     }
 
 
-    @When("user hover over three dots on the end of the list of records in driver page")
-    public void user_hover_over_three_dots_on_the_end_of_the_list_of_records_in_driver_page() {
+    @When("user hover over ellipses on the end of the list of records in driver page")
+    public void user_hover_over_ellipses_on_the_end_of_the_list_of_records_in_driver_page() {
 
         actions.moveToElement(editCarInfoItems_page.driverDots).pause(2000).click(editCarInfoItems_page.driverDots).build().perform();
 
@@ -46,8 +46,8 @@ public class US06_EditCarInfoItems_stepDef_TD {
     }
 
 
-    @When("user hover over three dots on the end of the list of records in sales and store page")
-    public void user_hover_over_three_dots_on_the_end_of_the_list_of_records_in_sales_and_store_page() {
+    @When("user hover over ellipses on the end of the list of records in sales and store page")
+    public void user_hover_over_ellipses_on_the_end_of_the_list_of_records_in_sales_and_store_page() {
 
 
         actions.moveToElement(editCarInfoItems_page.salesAndStoreDots).pause(2000).click(editCarInfoItems_page.salesAndStoreDots).build().perform();

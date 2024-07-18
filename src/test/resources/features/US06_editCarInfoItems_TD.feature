@@ -6,7 +6,7 @@ Feature: Edit car info items
   Scenario: verify user see "delete","view" and "edit" options when hovering over "..." on vehicles page
     Given the user logged in as "driver"
     When user chooses "Vehicles" from  the "Fleet" module
-    And user hover over three dots on the end of the list of records in driver page
+    And user hover over ellipses on the end of the list of records in driver page
     Then user should see below icons
       | Delete |
       | View   |
@@ -15,7 +15,7 @@ Feature: Edit car info items
   Scenario Outline: verify user see "delete","view" and "edit" options when hovering over "..." on vehicles page
     Given the user logged in as "<userType>"
     When user chooses "Vehicles" from  the "Fleet" module
-    And user hover over three dots on the end of the list of records in sales and store page
+    And user hover over ellipses on the end of the list of records in sales and store page
     Then user should see below icons
       | Delete |
       | View   |
