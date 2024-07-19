@@ -7,11 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class US03_PinbarHelp_page_ZC extends BasePage{
 
-    public US03_PinbarHelp_page_ZC(){
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-
-
     @FindBy(xpath = "//div/a[@href='/pinbar/help']")
     public WebElement howToUseThisSpace;
 

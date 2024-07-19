@@ -1,4 +1,4 @@
-@PRG13-306
+@PRG13-306 @US05
 Feature: Vehicles Model information webtable
   Agile story: As a user, I want to view columns on the Vehicles Model page.
 

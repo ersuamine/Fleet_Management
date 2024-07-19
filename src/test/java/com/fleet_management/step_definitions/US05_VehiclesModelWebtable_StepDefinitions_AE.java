@@ -25,7 +25,7 @@ public class US05_VehiclesModelWebtable_StepDefinitions_AE {
     public void user_is_on_the_page(String expectedPageTitle) {
 
         BrowserUtils.waitForTitleContains(expectedPageTitle);
-        Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedPageTitle));
+        BrowserUtils.verifyTitleContains(expectedPageTitle);
     }
 
 
