@@ -35,16 +35,6 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
-    @FindBy(xpath = "//span[text()=\"Calendar Events\"]")
-    public WebElement calendarEvents;
-
-    //TODO delete if not in use
-    @FindBy(xpath = "//li[@class='dropdown dropdown-level-1'][4]")
-    public WebElement activitiesModule;
-
-    @FindBy(css="li.dropdown.dropdown-level-1")
-    public List<WebElement> allModules;
-
 
     @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
     public WebElement fleetModule;
