@@ -9,8 +9,6 @@ import java.util.Set;
 
 public class US02_OroincDocumentationPage_StepDef_ZC {
 
-
-
     @When("users click the the question mark icon")
     public void users_click_the_the_question_mark_icon() {
 
