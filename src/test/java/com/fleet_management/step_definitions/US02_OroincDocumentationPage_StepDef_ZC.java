@@ -1,7 +1,6 @@
 package com.fleet_management.step_definitions;
 
 import com.fleet_management.pages.US02_OroincDocumentationPage_page_ZC;
-import com.fleet_management.utilities.BrowserUtils;
 import com.fleet_management.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,10 +9,12 @@ import java.util.Set;
 
 public class US02_OroincDocumentationPage_StepDef_ZC {
 
-    US02_OroincDocumentationPage_page_ZC oroincDocumentationPagePageZc = new US02_OroincDocumentationPage_page_ZC();
+
 
     @When("users click the the question mark icon")
     public void users_click_the_the_question_mark_icon() {
+
+        US02_OroincDocumentationPage_page_ZC oroincDocumentationPagePageZc = new US02_OroincDocumentationPage_page_ZC();
 
         oroincDocumentationPagePageZc.questionMark.click();
 
