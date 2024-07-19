@@ -1,12 +1,12 @@
-@PRG13-306 @US05
+@B34G13-153 @US05
 Feature: Vehicles Model information webtable
   Agile story: As a user, I want to view columns on the Vehicles Model page.
 
+  #@B34G13-138
   Background:User is already in the log in page
-		#@PRG13-303
     Given the user is on the login page
 
-  @PRG13-304
+  @B34G13-151
   Scenario Outline: Verify user can see columns on Vehicles Model page
     Given the user logged in as "<userType>"
     And user clicks "Vehicles Model" from "Fleet" tab
@@ -28,7 +28,7 @@ Feature: Vehicles Model information webtable
       | store manager |
       | sales manager |
 
-  @PRG13-305
+  @B34G13-152
   Scenario: Verify driver sees error message upon clicking Vehicles Model module
     Given the user logged in as "driver"
     And user clicks "Vehicles Model" from "Fleet" tab
