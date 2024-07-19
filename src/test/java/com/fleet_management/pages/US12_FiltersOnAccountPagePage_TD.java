@@ -13,6 +13,5 @@ public class US12_FiltersOnAccountPagePage_TD extends BasePage {
     @FindBy(xpath = "//a[@class='action btn mode-icon-only']")
     public WebElement filterButton;
 
-    @FindBy(xpath = "//div[@class='filter-box oro-clearfix-width']")
-    public WebElement filterBox;
+
 }

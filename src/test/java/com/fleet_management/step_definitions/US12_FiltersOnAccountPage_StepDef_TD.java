@@ -12,10 +12,7 @@ import java.util.List;
 public class US12_FiltersOnAccountPage_StepDef_TD {
     US12_FiltersOnAccountPagePage_TD filtersOnAccountPage = new US12_FiltersOnAccountPagePage_TD();
 
-    @When("user chooses Account from  the Customer module")
-    public void user_chooses_account_from_the_customer_module() {
-        filtersOnAccountPage.navigateToModule("Customers", "Accounts");
-    }
+
 
     @Then("user should see below filters on the Account page")
     public void user_should_see_below_filters_on_the_account_page(List<String> expectedInFilters) {
