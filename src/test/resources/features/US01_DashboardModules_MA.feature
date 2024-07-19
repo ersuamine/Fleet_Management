@@ -1,4 +1,4 @@
-@login @regression @US01
+@US01 @regression
 Feature: Users should be able to login
 
   Background: User is already in the log in page
@@ -7,7 +7,7 @@ Feature: Users should be able to login
   @Ac1 @wip1
   Scenario Outline: Menu Options for sales manager
     Given the user logged in as "<userType>"
-    Then user should be able to see following modules
+    When user should be able to see following modules
       | Dashboards         |
       | Fleet              |
       | Customers          |
@@ -26,7 +26,7 @@ Feature: Users should be able to login
   @Ac2 @wip1
   Scenario: Verify that ** Drivers see 4 module names.
     Given the user logged in as "driver"
-    Then user should be able to see following modules
+    When user should be able to see following modules
 
       | Fleet      |
       | Customers  |

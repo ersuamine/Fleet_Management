@@ -3,14 +3,15 @@ package com.fleet_management.step_definitions;
 import com.fleet_management.pages.US08_CalendarEventsPage_MA;
 import com.fleet_management.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US08_CreateCalendarEvent_MA {
+public class US08_CreateCalendarEvent_StepDef_MA {
 
     US08_CalendarEventsPage_MA calendarEventsPage = new US08_CalendarEventsPage_MA();
 
 
-    @Then("user click the Create Calendar Event button")
+    @When("user click the Create Calendar Event button")
     public void user_click_the_create_calendar_event_button() {
 
         calendarEventsPage.createCalendarEventButton.click();
@@ -30,7 +31,6 @@ public class US08_CreateCalendarEvent_MA {
 
         Assert.assertEquals(expectedDayValue, actualDayValue);
 
-
     }
 
     @Then("user cleared the Calendar event Repeat Every field")
@@ -39,9 +39,10 @@ public class US08_CreateCalendarEvent_MA {
     }
 
     @Then("user should be able to see {string} error message")
-    public void userShouldBeAbleToSeeErrorMessage(String ErrorMessage) {
-        Assert.assertTrue(ErrorMessage.contains(calendarEventsPage.repeatEverydayInputBox.getText()));
+
+    public void userShouldBeAbleToSeeErrorMessage(String expectedWarningMessage) {
+        Assert.assertTrue(expectedWarningMessage.contains(calendarEventsPage.warningMessage.getText()));
+
 
     }
 }
-
