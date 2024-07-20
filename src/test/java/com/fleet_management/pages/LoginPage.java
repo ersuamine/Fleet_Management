@@ -15,14 +15,11 @@ public class LoginPage  {
     @FindBy(id="prependedInput")
     public WebElement userName;
 
-
-
     @FindBy(id="prependedInput2")
     public WebElement password;
 
     @FindBy(name = "_submit")
     public WebElement submit;
-
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
