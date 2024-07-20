@@ -18,8 +18,7 @@ public class US13_VehicleCostsPage extends BasePage {
 
     }
 
-    @FindBy(xpath = "//span[.='Vehicle Costs']")
-    public WebElement vehicleCosts;
+
 
     @FindBy(xpath = "//table//thead[@class='grid-header']//a[@class='grid-header-cell__link']")
     public List<WebElement> tableThreeColumns;
