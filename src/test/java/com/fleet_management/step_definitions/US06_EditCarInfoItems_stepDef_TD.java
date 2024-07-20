@@ -3,17 +3,17 @@ package com.fleet_management.step_definitions;
 import com.fleet_management.pages.US06_EditCarInfoItems_Page_TD;
 import com.fleet_management.utilities.BrowserUtils;
 import com.fleet_management.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class US06_EditCarInfoItems_stepDef_TD {
+public class US06_EditCarInfoItems_StepDef_TD {
     US06_EditCarInfoItems_Page_TD editCarInfoItems_page = new US06_EditCarInfoItems_Page_TD();
     Actions actions = new Actions(Driver.getDriver());
 
@@ -42,18 +42,9 @@ public class US06_EditCarInfoItems_stepDef_TD {
         }
 
         Assert.assertTrue(expectedIcons.containsAll(actualOptions));
-
     }
-
-
-    @When("user hover over ellipses on the end of the list of records in sales and store page")
+    @Given("user hover over ellipses on the end of the list of records in sales and store page")
     public void user_hover_over_ellipses_on_the_end_of_the_list_of_records_in_sales_and_store_page() {
-
-
         actions.moveToElement(editCarInfoItems_page.salesAndStoreDots).pause(2000).click(editCarInfoItems_page.salesAndStoreDots).build().perform();
-
     }
 }
-
-
-
