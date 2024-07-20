@@ -41,7 +41,7 @@ public class US08_CreateCalendarEvent_StepDef_MA {
     @Then("user should be able to see {string} error message")
 
     public void userShouldBeAbleToSeeErrorMessage(String expectedWarningMessage) {
-        Assert.assertTrue(expectedWarningMessage.contains(calendarEventsPage.warningMessage.getText()));
+        Assert.assertTrue((calendarEventsPage.warningMessage.getText().contains(expectedWarningMessage)));
 
 
     }

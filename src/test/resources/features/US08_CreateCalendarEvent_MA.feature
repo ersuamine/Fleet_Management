@@ -1,5 +1,5 @@
-@login @regression @US08
-Feature: Users should be able to login
+@regression @US08
+Feature: Create a recurring(repetitive) calendar event
 
   Background: User is already in the log in page
     Given the user is on the login page

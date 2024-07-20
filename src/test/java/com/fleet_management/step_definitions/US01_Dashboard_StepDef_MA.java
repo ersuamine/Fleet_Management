@@ -11,11 +11,11 @@ import java.util.List;
 
 public class US01_Dashboard_StepDef_MA {
 
-    US01_DashboardPage_MA us01_DashboardPage = new US01_DashboardPage_MA();
 
     @Then("user should be able to see following modules")
     public void user_should_be_able_to_see_following_modules(List<String> expectedModules) {
 
+        US01_DashboardPage_MA us01_DashboardPage = new US01_DashboardPage_MA();
 
         BrowserUtils.waitForTitleContains("Dashboard");
 
