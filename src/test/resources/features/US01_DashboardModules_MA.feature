@@ -1,13 +1,13 @@
-@login @regression @US01
-Feature: Users should be able to login
+@US01 @regression
+Feature: Accessing all the main modules of the app
 
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @Ac1
+  @AC1 @wip1
   Scenario Outline: Menu Options for sales manager
     Given the user logged in as "<userType>"
-    Then sales manager should be able to see following modules
+    When user should be able to see following modules
       | Dashboards         |
       | Fleet              |
       | Customers          |
@@ -23,10 +23,10 @@ Feature: Users should be able to login
       | sales manager |
 
 
-  @Ac2
+  @AC2 @wip1
   Scenario: Verify that ** Drivers see 4 module names.
-    When "driver" enters the information
-    Then driver should be able to see following modules
+    Given the user logged in as "driver"
+    When user should be able to see following modules
 
       | Fleet      |
       | Customers  |
