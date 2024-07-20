@@ -1,10 +1,10 @@
-@regression @US08
+@regression @US08 @B34G13-165
 Feature: Create a recurring(repetitive) calendar event
 
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @Ac1
+  @Ac1 @B34G13-163
   Scenario Outline: Verify that users see the number “1”
     Given the user logged in as "<userType>"
     When user clicks "Calendar Events" from "Activities" tab
@@ -18,7 +18,7 @@ Feature: Create a recurring(repetitive) calendar event
       | sales manager |
       | driver        |
 
-  @Ac2
+  @Ac2 @B34G13-164
   Scenario Outline: Verify that users see error message
     Given the user logged in as "<userType>"
     When user clicks "Calendar Events" from "Activities" tab
