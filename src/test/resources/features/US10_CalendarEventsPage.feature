@@ -9,14 +9,15 @@ Feature: I want to type into the Description field when I create a calendar even
     Given the user logged in as "<userType>"
     And user clicks "Calendar Events" from "Activities" tab
     Then user click to the Create Calendar event button
-    And user should be abel to type messages in to the Description field
-    Then user should be abel to see what's typed in the Description field
+    And user should be able to type messages in to the Description field
+    Then user should be able to see what's typed in the Description field
 
     Examples:
-      |userType|
-      |store manager|
-      |sales manager|
-
+    Examples:
+      | userType      |
+      | store manager |
+      | sales manager |
+      | driver        |
 
 
 

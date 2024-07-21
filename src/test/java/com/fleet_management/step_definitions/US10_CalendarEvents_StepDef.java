@@ -22,8 +22,8 @@ public class US10_CalendarEvents_StepDef {
     }
 
 
-    @And("user should be abel to type messages in to the Description field")
-    public void userShouldBeAbelToTypeMessagesInToTheDescriptionField() {
+    @And("user should be able to type messages in to the Description field")
+    public void userShouldBeAbleToTypeMessagesInToTheDescriptionField() {
 
         BrowserUtils.waitFor(3);
         Driver.getDriver().switchTo().frame(us10_CalendarEventsPage.iframe);
@@ -33,8 +33,8 @@ public class US10_CalendarEvents_StepDef {
 
     }
 
-    @Then("user should be abel to see what's typed in the Description field")
-    public void userShouldBeAbelToSeeWhatSTypedInTheDescriptionField() {
+    @Then("user should be able to see what's typed in the Description field")
+    public void userShouldBeAbleToSeeWhatSTypedInTheDescriptionField() {
 
         String actualText = us10_CalendarEventsPage.descriptionField.getText();
 
