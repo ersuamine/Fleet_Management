@@ -9,6 +9,7 @@ public class US11_VehiclesOdometerInfo_StepDefinitions_AE {
 
     @Then("see default page number as {int}")
     public void see_default_page_number_as(Integer expectedPageNumber) {
+
         Integer actualPageNumber = Integer.valueOf(odometerPage.pageNumber.getAttribute("value"));
 
         Assert.assertEquals(expectedPageNumber,actualPageNumber);

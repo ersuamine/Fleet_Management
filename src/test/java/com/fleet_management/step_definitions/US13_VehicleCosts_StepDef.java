@@ -4,6 +4,7 @@ import com.fleet_management.pages.BasePage;
 import com.fleet_management.pages.US13_VehicleCostsPage;
 import com.fleet_management.utilities.BrowserUtils;
 import com.fleet_management.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -42,6 +43,13 @@ public class US13_VehicleCosts_StepDef {
         Assert.assertTrue(us13_vehicleCostsPage.checkbookVehicleCosts.isSelected());
 
 
+
+    }
+
+    @And("user click to the next page button")
+    public void userClickToTheNextPageButton() {
+        us13_vehicleCostsPage.nextPageButton.click();
+        BrowserUtils.waitFor(3);
 
     }
 }

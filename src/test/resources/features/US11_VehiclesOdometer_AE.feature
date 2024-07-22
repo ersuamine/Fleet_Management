@@ -1,4 +1,4 @@
-@B34G13-157
+@B34G13-157 @regression
 Feature: Vehicles Odometer page information
   Agile story: As a user, I want to view car odometer info on the Vehicles Odometer page.
 
