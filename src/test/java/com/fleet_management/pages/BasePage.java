@@ -36,8 +36,6 @@ public abstract class BasePage {
     public WebElement myUser;
 
 
-    @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
-    public WebElement fleetModule;
 
 
     public BasePage() {

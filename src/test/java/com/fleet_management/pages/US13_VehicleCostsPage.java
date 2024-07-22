@@ -10,21 +10,14 @@ import java.util.List;
 
 public class US13_VehicleCostsPage extends BasePage {
 
-    public US13_VehicleCostsPage() {
-
-        PageFactory.initElements(Driver.getDriver(), this);
-
-
-
-    }
-
-    @FindBy(xpath = "//span[.='Vehicle Costs']")
-    public WebElement vehicleCosts;
 
     @FindBy(xpath = "//table//thead[@class='grid-header']//a[@class='grid-header-cell__link']")
     public List<WebElement> tableThreeColumns;
 
     @FindBy(xpath = "//button[@class='btn btn-default btn-small dropdown-toggle']/input")
     public WebElement checkbookVehicleCosts;
+
+    @FindBy(xpath = "//i[@class='fa-chevron-right hide-text']")
+    public WebElement nextPageButton;
 
 }
