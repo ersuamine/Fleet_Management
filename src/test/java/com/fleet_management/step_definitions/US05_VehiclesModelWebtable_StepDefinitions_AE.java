@@ -2,13 +2,9 @@ package com.fleet_management.step_definitions;
 
 import com.fleet_management.pages.US05_VehiclesModelPage_AE;
 import com.fleet_management.utilities.BrowserUtils;
-import com.fleet_management.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class US05_VehiclesModelWebtable_StepDefinitions_AE {
@@ -28,16 +24,10 @@ public class US05_VehiclesModelWebtable_StepDefinitions_AE {
         BrowserUtils.verifyTitleContains(expectedPageTitle);
     }
 
-
     @Then("user should see following columns")
     public void user_should_see_following_columns(List<String> expectedTableHeaders) {
 
-        List<String> actualTableHeaders = new ArrayList<>();
-
-        for (WebElement header : vehicleModelPage.tableHeaders) {
-            actualTableHeaders.add(header.getText());
-        }
-
+        List<String> actualTableHeaders = BrowserUtils.getElementsText(vehicleModelPage.tableHeaders);
         Assert.assertEquals(expectedTableHeaders,actualTableHeaders);
     }
 
