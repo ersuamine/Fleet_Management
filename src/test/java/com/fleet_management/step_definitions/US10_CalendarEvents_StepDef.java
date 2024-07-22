@@ -14,12 +14,6 @@ public class US10_CalendarEvents_StepDef {
 
 
 
-    @Then("user click to the Create Calendar event button")
-    public void user_click_to_the_create_calendar_event_button() {
-        BrowserUtils.waitFor(3);
-        us10_CalendarEventsPage.createCalendarEventLink.click();
-
-    }
 
 
     @And("user should be able to type messages in to the Description field")
