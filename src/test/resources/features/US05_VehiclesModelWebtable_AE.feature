@@ -1,4 +1,4 @@
-@B34G13-153 @US05
+@B34G13-153 @US05 @regression
 Feature: Vehicles Model information webtable
   Agile story: As a user, I want to view columns on the Vehicles Model page.
 
