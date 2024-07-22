@@ -18,9 +18,10 @@ public class US04_VehicleContracts_StepDef_ZU {
 
     @Then("verify the expected title as {string}")
     public void verify_the_expected_title_as(String expectedTitle) {
-
-        String actualTitle = Driver.getDriver().getTitle();
+        //refreshing to update title from Dashboard to "All - Vehicle Contract - Entities - System - Car - Entities - System"
+        Driver.getDriver().navigate().refresh();
         BrowserUtils.waitForTitleContains(expectedTitle);
+        String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(expectedTitle, actualTitle);
 
     }
