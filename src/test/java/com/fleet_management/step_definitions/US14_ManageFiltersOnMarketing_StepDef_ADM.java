@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
 import java.util.Random;
 
 
@@ -46,17 +47,26 @@ public class US14_ManageFiltersOnMarketing_StepDef_ADM {
 
     @And("user should be able to click any amount of checkboxes to uncheck")
     public void userShouldBeAbleToClickAnyAmountOfCheckboxesToUncheck() {
+        //check to see if the checkbox list is empty
+        //empty list with for loop will give no assertion with passing test result
+        List<WebElement> actualCheckboxes = us14_campaignPage.multiSelectCheckBoxes;
+        Assert.assertNotNull(actualCheckboxes);
 
-        // create instance of Random class
-        Random rand = new Random();
+        List<Integer> randomIndices = BrowserUtils.randomNumberList(actualCheckboxes.size(),BrowserUtils.randomNumber(actualCheckboxes.size()+1));
 
-        // Generate random integers in range 0 to 4
-        int randomIndex = rand.nextInt(5);
+        System.out.println("randomIndices = " + randomIndices);
 
-        //unchecking the checkbox
-        us14_campaignPage.multiSelectCheckBoxes.get(randomIndex).click();
+        for (Integer index : randomIndices) {
+            //unchecking the checkbox
+            actualCheckboxes.get(index).click();
+            //BrowserUtils.waitForStaleElement(actualCheckboxes.get(index));
+            Assert.assertFalse(us14_campaignPage.multiSelectCheckBoxes.get(index).isSelected());
+            System.out.println("us14_campaignPage.multiSelectCheckBoxes.get(index).isSelected() = " + us14_campaignPage.multiSelectCheckBoxes.get(index).isSelected());
 
-        Assert.assertFalse(us14_campaignPage.multiSelectCheckBoxes.get(randomIndex).isSelected());
+        }
+
+
+
 
 
     }
